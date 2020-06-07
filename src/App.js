@@ -21,13 +21,13 @@ export default function App() {
       .catch(err => {
         setIsFetchingData(false);
         setError(err.message);
-      });
-  };
+      })
+  }
   return (
     <div className="App">
       <h1>Space Missions</h1>
       <MissionForm getData={getData} isFetchingData={isFetchingData} />
       <MissionsList error={error} missions={missions} />
     </div>
-  );
+  )
 }
